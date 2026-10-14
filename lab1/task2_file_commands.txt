@@ -1,0 +1,13 @@
+/home/gic-phy-sopanha/oslab-work/lab1/task2_files
+candle.txt
+silver.txt
+This is file candle
+This is file silver
+candle.txt
+candle_copy.txt
+silver.txt
+candle.txt
+candle_copy.txt
+silver_renamed.txt
+candle.txt
+silver_renamed.txt

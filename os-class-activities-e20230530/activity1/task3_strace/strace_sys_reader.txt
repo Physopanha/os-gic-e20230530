@@ -1,0 +1,1 @@
+/usr/bin/strace: /usr/bin/strace: cannot execute binary file

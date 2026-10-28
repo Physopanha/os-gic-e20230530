@@ -1,31 +1,79 @@
-Task 1 Questions:
-1. What flags did you pass to open()? What does each flag mean?
+# Class Activity 1 — System Calls in Practice
 
-=> O_WRONLY: Opens the file for writing only.
+- **Student Name:** Phy Sopanha
+- **Student ID:** e20230530
+- **Date:** October 28, 2026
 
-   O_CREAT: Creates the file if it does not already exist.
+---
 
-   O_TRUNC: Truncates (clears) the file's contents to zero length if it already exists.
+## Warm-Up: Hello System Call
 
-2. What is 0644 in the permission argument? What does each digit represent?
-=> The 0 indicates it is an octal number.
-   
-   The 6 represents the Owner permissions: read (4) + write (2).
+Screenshot of running `hello_syscall.c` on Linux:
 
-   The first 4 represents Group permissions: read-only (4).
+![Hello syscall](screenshots/hello_syscall.png)
 
-   The second 4 represents Others/Public permissions: read-only (4).
+Screenshot of running `hello_winapi.c` on Windows (CMD/PowerShell/VS Code):
 
-3. What does fopen("output.txt", "w") do internally that you had to do manually with open()?
+![Hello WinAPI](screenshots/hello_winapi.png)
 
-=> When you pass "w" to fopen(), the C standard library automatically combines the system-level flags to create the file if missing, open it as write-only, and truncate it. With open(), you had to explicitly specify O_WRONLY | O_CREAT | O_TRUNC and set the file permissions manually.
+Screenshot of running `copyfilesyscall.c` on Linux:
 
-Task 2 Questions:
-1. What struct does readdir() return? What fields does it contain?
-=> It returns a dirent struct. It contains fields like d_ino (inode number), d_off (offset to the next dirent), d_reclen (length of this record), d_type (type of file), and d_name (null-terminated filename).
+![Copy file syscall](screenshots/copyfilesyscall.png)
 
-2. What information does stat() provide beyond file size?
-=> It provides information like device ID, inode number, file mode (permissions and type), number of hard links, user ID of owner, group ID of owner, device ID (if special file), block size for filesystem I/O, number of 512B blocks allocated, and timestamps for last access, modification, and status change.
+---
 
-3. Why can't you just write(1, some_number, ...) directly - why do you need snprintf() first?
-=> The write() system call outputs raw bytes to a file descriptor. If you pass an integer variable directly, write() will interpret those bytes as ASCII characters, printing gibberish or unprintable control characters. snprintf() is needed to convert the numerical value into a human-readable ASCII string representation before passing it to write().
+## Task 1: File Creator & Reader
+
+### Part A — File Creator
+
+**Describe your implementation:** The library version uses standard C functions which handle background buffering and file permissions automatically, while the system call version requires explicitly defining flags (O_WRONLY, O_CREAT, O_TRUNC) and exact permission modes (0644) to interact directly with the kernel.
+
+**Version A — Library Functions (`file_creator_lib.c`):**
+
+![Task 1A - Library](screenshots/task1_creator_lib.png)
+
+**Version B — POSIX System Calls (`file_creator_sys.c`):**
+
+![Task 1A - Syscall](screenshots/task1_creator_sys.png)
+
+**Questions:**
+
+1. **What flags did you pass to `open()`? What does each flag mean?**
+
+   > `O_WRONLY`: Opens the file for writing only. `O_CREAT`: Creates the file if it does not already exist. `O_TRUNC`: Truncates (clears) the file's contents to zero length if it already exists.
+
+2. **What is `0644`? What does each digit represent?**
+
+   > The 0 indicates it is an octal number. The 6 represents the Owner permissions: read (4) + write (2). The first 4 represents Group permissions: read-only (4). The second 4 represents Others/Public permissions: read-only (4).
+
+3. **What does `fopen("output.txt", "w")` do internally that you had to do manually?**
+
+   > When you pass "w" to `fopen()`, the C standard library automatically combines the system-level flags to create the file if missing, open it as write-only, and truncate it.
+
+### Part B — File Reader & Display
+
+**Describe your implementation:** The system call implementation reads raw bytes into a fixed-size buffer using file descriptors, whereas the library version uses high-level streams.
+
+**Version A — Library Functions (`file_reader_lib.c`):**
+
+![Task 1B - Library](screenshots/task1_reader_lib.png)
+
+**Version B — POSIX System Calls (`file_reader_sys.c`):**
+
+![Task 1B - Syscall](screenshots/task1_reader_sys.png)
+
+**Questions:**
+
+1. **What does `read()` return? How is this different from `fgets()`?**
+
+   > `read()` returns the number of bytes successfully read as an integer (or -1 on error, 0 on EOF). This is different from `fgets()`, which reads until a newline or EOF and returns a string pointer (char*).
+
+2. **Why do you need a loop when using `read()`? When does it stop?**
+
+   > You need a loop because a single `read()` call might not read the entire file into the buffer at once, especially for large files. It stops when `read()` returns 0, indicating the End of File (EOF) has been reached.
+
+---
+
+## Task 2: Directory Listing & File Info
+
+**Describe your implementation:** I replaced `printf()` with `write()`. Because `write()` only handles string buffers, I had to use `snprintf()` to format the file sizes and names into a string buffer before writing them to standard output (file descriptor 1).

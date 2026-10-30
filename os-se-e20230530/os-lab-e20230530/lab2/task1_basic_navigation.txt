@@ -1,0 +1,43 @@
+/home/gic-phy-sopanha
+total 64
+drwxr-x---+ 8 gic-phy-sopanha gic-phy-sopanha  4096 Oct 28 16:15 .
+drwxr-xr-x 63 root            root             4096 Oct  7 20:53 ..
+-rw-------  1 gic-phy-sopanha gic-phy-sopanha 10806 Oct 28 14:36 .bash_history
+-rw-r--r--  1 gic-phy-sopanha gic-phy-sopanha   220 Feb 13  2026 .bash_logout
+-rw-r--r--  1 gic-phy-sopanha gic-phy-sopanha  3771 Feb 13  2026 .bashrc
+drwx------  2 gic-phy-sopanha gic-phy-sopanha  4096 Oct  8 08:07 .cache
+-rw-rw-r--  1 gic-phy-sopanha gic-phy-sopanha    59 Oct 14 10:35 .gitconfig
+-rw-------  1 gic-phy-sopanha gic-phy-sopanha    20 Oct 28 15:17 .lesshst
+drwx------  3 gic-phy-sopanha gic-phy-sopanha  4096 Oct 22 08:10 .local
+-rw-r--r--  1 gic-phy-sopanha gic-phy-sopanha   807 Feb 13  2026 .profile
+drwx------  2 gic-phy-sopanha gic-phy-sopanha  4096 Oct 14 10:33 .ssh
+drwxrwxr-x  6 gic-phy-sopanha gic-phy-sopanha  4096 Oct 28 16:05 os-gic-e20230530
+drwxrwxr-x  3 gic-phy-sopanha gic-phy-sopanha  4096 Oct 28 16:15 os-se-e20230530
+drwx------  4 gic-phy-sopanha gic-phy-sopanha  4096 Oct  8 08:53 oslab-work
+--- Root directory (/) ---
+/
+bin
+boot
+cdrom
+dev
+etc
+home
+lib
+lib64
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+snap
+srv
+swap.img
+sys
+tmp
+usr
+var
+--- Back to home ---
+/home/gic-phy-sopanha

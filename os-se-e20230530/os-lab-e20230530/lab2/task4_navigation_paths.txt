@@ -22,3 +22,11 @@ q1_launch.txt
 social_media.txt
 --- cd - (back to previous directory) ---
 /home/gic-phy-sopanha/os-se-e20230530/os-lab-e20230530/lab2/techcorp
+--- Challenge Navigation ---
+/home/gic-phy-sopanha/os-gic-e20230530/os-se-e20230530/os-lab-e20230530/lab2/techcorp/engineering/backend
+/home/gic-phy-sopanha/os-gic-e20230530/os-se-e20230530/os-lab-e20230530/lab2/techcorp/marketing/assets
+/usr/bin
+/home/gic-phy-sopanha/os-gic-e20230530/os-se-e20230530/os-lab-e20230530/lab2/techcorp/marketing/assets
+/home/gic-phy-sopanha/os-gic-e20230530/os-se-e20230530/os-lab-e20230530/lab2/techcorp/hr/onboarding
+checklist.txt
+welcome_guide.txt

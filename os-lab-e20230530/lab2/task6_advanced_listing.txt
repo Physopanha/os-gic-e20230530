@@ -1,0 +1,240 @@
+=== Task 6: Advanced Listing & Directory Audit ===
+--- Recursive Listing (ls -R) ---
+techcorp:
+engineering
+hr
+marketing
+
+techcorp/engineering:
+backend
+devops
+frontend
+
+techcorp/engineering/backend:
+app.js
+database.sql
+pipeline_backup.txt
+server_config.txt
+
+techcorp/engineering/devops:
+Dockerfile
+docker-compose.yml
+pipeline.txt
+security_audit.txt
+server_notice.txt
+
+techcorp/engineering/frontend:
+frontend_config.txt
+index.html
+styles.css
+
+techcorp/hr:
+onboarding
+policies
+
+techcorp/hr/onboarding:
+checklist.txt
+handbook.txt
+leave_policy.txt
+welcome_guide.txt
+
+techcorp/hr/policies:
+leave_policy.txt
+remote_work.txt
+
+techcorp/marketing:
+assets
+campaigns
+
+techcorp/marketing/assets:
+banner.jpg
+brochure.pdf
+logo.png
+logo_brief.txt
+
+techcorp/marketing/campaigns:
+q1_2026_launch.txt
+social_media.txt
+
+--- Sort by Size: engineering/ (ls -lS) ---
+total 4
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 26 Oct 28 16:47 frontend_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:47 styles.css
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:47 index.html
+total 8
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 30 14:17 pipeline_backup.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:47 server_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 database.sql
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 app.js
+total 12
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 48 Oct 30 14:13 server_notice.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 34 Oct 30 14:16 security_audit.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:48 pipeline.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 docker-compose.yml
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 Dockerfile
+
+--- Sort by Time: techcorp/ (ls -lt) ---
+total 8
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 32 Oct 28 16:46 remote_work.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 28 16:46 leave_policy.txt
+total 12
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 30 14:15 leave_policy.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 23 Oct 30 14:13 handbook.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:46 checklist.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 52 Oct 28 16:46 welcome_guide.txt
+total 8
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 35 Oct 28 16:49 social_media.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 32 Oct 28 16:49 q1_2026_launch.txt
+
+--- Sort by Time: techcorp/ (ls-lt) ---
+total 4.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 banner.jpg
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 brochure.pdf
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 logo.png
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 22 Oct 30 14:13 logo_brief.txt
+total 12K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 Dockerfile
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 docker-compose.yml
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:48 pipeline.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 34 Oct 30 14:16 security_audit.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 48 Oct 30 14:13 server_notice.txt
+
+--- Human-Readable (ls -lh) ---
+total 4.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 banner.jpg
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 brochure.pdf
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 logo.png
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 22 Oct 30 14:13 logo_brief.txt
+total 12K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 Dockerfile
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 docker-compose.yml
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:48 pipeline.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 34 Oct 30 14:16 security_audit.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 48 Oct 30 14:13 server_notice.txt
+
+--- Reverse Sort by Size (ls -rlS) ---
+total 8
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 app.js
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 database.sql
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:47 server_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 30 14:17 pipeline_backup.txt
+
+--- Reverse Sort by Size (ls -rlS) ---
+total 8
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 app.js
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 database.sql
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:47 server_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 30 14:17 pipeline_backup.txt
+
+--- Reverse Sort by Time (ls -rlt) ---
+total 12
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 52 Oct 28 16:46 welcome_guide.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:46 checklist.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 23 Oct 30 14:13 handbook.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 30 14:15 leave_policy.txt
+
+--- Combined: Recursive + Human-Readable + Sort by Size (ls -lhRS) ---
+techcorp/:
+total 12K
+drwxrwxr-x 5 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 28 16:45 engineering
+drwxrwxr-x 4 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:13 marketing
+drwxrwxr-x 4 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 28 16:45 hr
+
+techcorp/engineering:
+total 12K
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:17 devops
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:18 frontend
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:17 backend
+
+techcorp/engineering/devops:
+total 12K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 48 Oct 30 14:13 server_notice.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 34 Oct 30 14:16 security_audit.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:48 pipeline.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 docker-compose.yml
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 Dockerfile
+
+techcorp/engineering/frontend:
+total 4.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 26 Oct 28 16:47 frontend_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:47 styles.css
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:47 index.html
+
+techcorp/engineering/backend:
+total 8.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 30 14:17 pipeline_backup.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:47 server_config.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 database.sql
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 app.js
+
+techcorp/marketing:
+total 8.0K
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:18 campaigns
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:13 assets
+
+techcorp/marketing/campaigns:
+total 8.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 35 Oct 28 16:49 social_media.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 32 Oct 28 16:49 q1_2026_launch.txt
+
+techcorp/marketing/assets:
+total 4.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 22 Oct 30 14:13 logo_brief.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 logo.png
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 brochure.pdf
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 banner.jpg
+
+techcorp/hr:
+total 8.0K
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:17 policies
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:15 onboarding
+
+techcorp/hr/policies:
+total 8.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 28 16:46 leave_policy.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 32 Oct 28 16:46 remote_work.txt
+
+techcorp/hr/onboarding:
+total 12K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 52 Oct 28 16:46 welcome_guide.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 30 14:15 leave_policy.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 23 Oct 30 14:13 handbook.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:46 checklist.txt
+
+--- Challenge Investigation ---
+total 12
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 39 Oct 30 14:15 leave_policy.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 23 Oct 30 14:13 handbook.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:46 checklist.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 52 Oct 28 16:46 welcome_guide.txt
+techcorp/marketing/:
+total 8.0K
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:13 assets
+drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 30 14:18 campaigns
+
+techcorp/marketing/assets:
+total 4.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 banner.jpg
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 brochure.pdf
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:49 logo.png
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 22 Oct 30 14:13 logo_brief.txt
+
+techcorp/marketing/campaigns:
+total 8.0K
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 32 Oct 28 16:49 q1_2026_launch.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 35 Oct 28 16:49 social_media.txt
+total 12
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 Dockerfile
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha  0 Oct 28 16:48 docker-compose.yml
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 29 Oct 28 16:48 pipeline.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 34 Oct 30 14:16 security_audit.txt
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha 48 Oct 30 14:13 server_notice.txt
+-rw------- 1 gic-phy-sopanha gic-phy-sopanha  18K Oct 30 11:03 .bash_history
+drwx------ 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct  8 08:07 .cache
+drwx------ 3 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 22 08:10 .local
+drwx------ 2 gic-phy-sopanha gic-phy-sopanha 4.0K Oct 14 10:33 .ssh
+-rw-r--r-- 1 gic-phy-sopanha gic-phy-sopanha 3.7K Feb 13  2026 .bashrc
+-rw-r--r-- 1 gic-phy-sopanha gic-phy-sopanha  807 Feb 13  2026 .profile
+-rw-r--r-- 1 gic-phy-sopanha gic-phy-sopanha  220 Feb 13  2026 .bash_logout
+-rw-rw-r-- 1 gic-phy-sopanha gic-phy-sopanha   59 Oct 14 10:35 .gitconfig
+-rw------- 1 gic-phy-sopanha gic-phy-sopanha   20 Oct 28 15:17 .lesshst

@@ -1,0 +1,20 @@
+ 1085  exit
+ 1086  ./server
+ 1087  exit
+ 1088  ./server
+ 1089  cd ~/os-gic-e20230530/os-class-activities-e20230530/activity3/task1_socket
+ 1090  ./server
+ 1091  killall server
+ 1092  ./server
+ 1093  sed -i 's/8080/9090/g' server.c client.c
+ 1094  gcc -o server server.c
+ 1095  gcc -o client client.c
+ 1096  ./server
+ 1097  ./server > result_server.txt 2>&1 &
+ 1098  cls
+ 1099  ./server > result_server.txt 2>&1 &
+ 1100  sleep 1
+ 1101  ./client > result_client.txt 2>&1
+ 1102  wait
+ 1103  cat result_server.txt result_client.txt > result_socket.txt
+ 1104  history | tail -n 20 > command_used_socket.txt

@@ -1,0 +1,24 @@
+gic-phy+ 2468147 2461647 2468147  0    5 11:08 pts/9    00:00:00 ./threads_observe
+gic-phy+ 2468147 2461647 2468149  0    5 11:08 pts/9    00:00:00 ./threads_observe
+gic-phy+ 2468147 2461647 2468150  0    5 11:08 pts/9    00:00:00 ./threads_observe
+gic-phy+ 2468147 2461647 2468151  0    5 11:08 pts/9    00:00:00 ./threads_observe
+gic-phy+ 2468147 2461647 2468152  0    5 11:08 pts/9    00:00:00 ./threads_observe
+gic-phy+ 2468222 2461647 2468222  0    1 11:09 pts/9    00:00:00 grep --color=auto threads_observe
+    PID    SPID TTY          TIME CMD
+2468147 2468147 pts/9    00:00:00 threads_observe
+2468147 2468149 pts/9    00:00:00 threads_observe
+2468147 2468150 pts/9    00:00:00 threads_observe
+2468147 2468151 pts/9    00:00:00 threads_observe
+2468147 2468152 pts/9    00:00:00 threads_observe
+    PID    SPID TTY          TIME CMD
+2468147 2468147 pts/9    00:00:00 threads_observe
+2468147 2468149 pts/9    00:00:00 threads_observe
+2468147 2468150 pts/9    00:00:00 threads_observe
+2468147 2468151 pts/9    00:00:00 threads_observe
+2468147 2468152 pts/9    00:00:00 threads_observe
+--- /proc/2468147/task/ listing ---
+2468147
+2468149
+2468150
+2468151
+2468152

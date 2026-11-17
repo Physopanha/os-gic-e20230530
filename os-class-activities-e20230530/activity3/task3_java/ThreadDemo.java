@@ -12,7 +12,7 @@ public class ThreadDemo {
             for (int i = 1; i <= count; i++) {
                 System.out.printf("[%s] Count: %d (Thread ID: %d)%n",
                     name, i, Thread.currentThread().getId());
-                try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
+                try { Thread.sleep(15000); } catch (InterruptedException e) { e.printStackTrace(); }
             }
             System.out.printf("[%s] Finished!%n", name);
         }

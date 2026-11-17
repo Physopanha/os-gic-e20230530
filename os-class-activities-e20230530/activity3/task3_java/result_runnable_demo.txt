@@ -1,0 +1,13 @@
+Main: creating threads with Runnable interface
+
+[Upload] Step 1 (Thread: uploader, ID: 37)
+[Download] Step 1 (Thread: downloader, ID: 35)
+[Process] Step 1 (Thread: processor, ID: 36)
+[Download] Step 2 (Thread: downloader, ID: 35)
+[Upload] Step 2 (Thread: uploader, ID: 37)
+[Process] Step 2 (Thread: processor, ID: 36)
+[Download] Step 3 (Thread: downloader, ID: 35)
+[Upload] Step 3 (Thread: uploader, ID: 37)
+[Process] Step 3 (Thread: processor, ID: 36)
+
+Main: all tasks completed.

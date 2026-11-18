@@ -1,0 +1,59 @@
+=== Full Command History ===
+    1  cd /mt/c/User/ADMIN/os-gic-e20230530/lab1
+    2  cd lab1/
+    3  mkdir -p images
+    4  ls
+    5  sudo apt-get update
+    6  sudo apt-get install mc -y
+    7  which mc > task3_apt.txt
+    8  ls -ld /etc/mc >> task3_apt.txt
+    9  sudo apt-get remove mc-y
+   10  ls -ld /etc/mc >> task3_apt.txt
+   11  cat task3_apt.txt
+   12  sudo apt-get purge mc-y
+   13  ls -ld /etc/mc >> task3_apt.txt
+   14  cat task3_apt.txt 
+   15  which mc > task3_apt.text
+   16  which mc > task3_apt.txt
+   17  ls -ld /etc/mc >> task3_apt.txt
+   18  cat task3_apt.t
+   19  cat task3_apt.txt
+   20  sudo apt-get remove mc -y
+   21  ls -ld /etc/mc >> task3_apt.txt
+   22  sudo apt-get purge mc -y
+   23  ls -ld /etc/mc >> task3_apt.txt
+   24  sudo apt-get purge mc -y
+   25  ls -ld /etc/mc >> task3_apt.txt 2>&1
+   26  cat task3_apt.txt
+   27  rm -f task3_apt.text sliver.txt file1.txt file2.txt
+   28  cd ~/os-gic-e20230530
+   29  rm -f README.txt
+   30  cd ..
+   31  git status
+   32  cd "/mnt/d/CODE/I4 S1/Operating system/os-gic-e20230530/os-lab-e20230530/lab3"
+   33  sudo cp libtechcorp_sysinfo.so /usr/local/lib/
+   34  wsl -d Ubuntu -u root
+   35  sudo cp libtechcorp_sysinfo.so /usr/local/lib/
+   36  admin1@DESKTOP-LR7RTM4:/mnt/d/CODE/I4 S1/Operating system/os-gic-e20230530/os-lab-e20230530/lab3$ sudo cp libtechcorp_sysinfo.so /usr/local/lib/
+   37  [sudo: authenticate] Password:
+   38  cp: cannot stat 'libtechcorp_sysinfo.so': No such file or directory
+   39  admin1@DESKTOP-LR7RTM4:/mnt/d/CODE/I4 S1/Operating system/os-gic-e20230530/os-lab-e20230530/lab3$
+   40  ls -la shared_lib_lab/
+   41  cd shared_lib_lab
+   42  sudo cp libtechcorp_sysinfo.so /usr/local/lib/
+   43  sudo ldconfig
+   44  echo "" >> ../task5_shared_library.txt
+   45  echo "--- System-wide install: ldconfig cache ---" >> ../task5_shared_library.txt
+   46  ldconfig -p | grep techcorp | tee -a ../task5_shared_library.txt
+   47  echo "" >> ../task5_shared_library.txt
+   48  echo "--- System-wide test (no LD_LIBRARY_PATH) ---" >> ../task5_shared_library.txt
+   49  ldd ./sysinfo_test_v2 2>&1 | tee -a ../task5_shared_library.txt
+   50  ./sysinfo_test_v2 | tee -a ../task5_shared_library.txt
+   51  clear && ldconfig -p | grep techcorp && echo "" && ldd ./sysinfo_test_v2 && echo "" && ./sysinfo_test_v2
+   52  echo "" >> ../task5_shared_library.txt
+   53  echo "--- Pair Information ---" >> ../task5_shared_library.txt
+   54  echo "Role A (Library Author -> v2 Tester): Phy Sopanha - e20230530" >> ../task5_shared_library.txt
+   55  echo "Role B (Test Author -> v2 Library Extender): <Partner Name> - <Student ID>" >> ../task5_shared_library.txt
+   56  cd ..
+   57  echo "=== Full Command History ===" > task_history.txt
+   58  history | tail -n 100 | tee -a task_history.txt

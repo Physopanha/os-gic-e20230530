@@ -68,3 +68,22 @@ Uptime   : 1008 hours, 12 minutes
 CPU Cores: 8
 Memory   : 7422 MB
 ======================================
+
+--- System-wide install: ldconfig cache ---
+	libtechcorp_sysinfo.so (libc6,x86-64) => /usr/local/lib/libtechcorp_sysinfo.so
+
+--- System-wide test (no LD_LIBRARY_PATH) ---
+	linux-vdso.so.1 (0x00007ffc3ecca000)
+	libtechcorp_sysinfo.so => /usr/local/lib/libtechcorp_sysinfo.so (0x000073028f026000)
+	libc.so.6 => /usr/lib/x86_64-linux-gnu/libc.so.6 (0x000073028ee00000)
+	/lib64/ld-linux-x86-64.so.2 (0x000073028f037000)
+=== TechCorp System Info Report v2 ===
+Hostname : DESKTOP-LR7RTM4
+Uptime   : 0 hours, 7 minutes
+CPU Cores: 20
+Memory   : 7749 MB
+======================================
+
+--- Pair Information ---
+Role A (Library Author -> v2 Tester): Phy Sopanha - e20230530
+Role B (Test Author -> v2 Library Extender): <Partner Name> - <Student ID>

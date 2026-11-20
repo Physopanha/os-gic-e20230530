@@ -1,0 +1,12 @@
+.:
+total 8
+19409531 drwxrwxr-x 2 gic-phy-sopanha gic-phy-sopanha 4096 Nov 20 23:50 links
+19409532 -rw-rw-r-- 2 gic-phy-sopanha gic-phy-sopanha   23 Nov 20 23:50 stone-draft.txt
+
+links:
+total 4
+19409533 lrwxrwxrwx 1 gic-phy-sopanha gic-phy-sopanha 18 Nov 20 23:50 first.txt -> ../stone-draft.txt
+19409532 -rw-rw-r-- 2 gic-phy-sopanha gic-phy-sopanha 23 Nov 20 23:50 hard.txt
+19409534 lrwxrwxrwx 1 gic-phy-sopanha gic-phy-sopanha  9 Nov 20 23:50 second.txt -> first.txt
+checkpoint lemon stone
+checkpoint lemon stone
